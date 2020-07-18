@@ -1,7 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import SwitchRoute from './components/SwitchRoute';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
+class App extends Component {
+
+
+  render() {
+    return (
+      <Router>
+        <Navbar />
+        
+        <SwitchRoute />
+
+        <Footer />
+      </Router>
+    )
+  }
+}
+
+export default App;
+
+/* Example
 function App() {
   return (
     <div className="App">
@@ -22,5 +45,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+*/
