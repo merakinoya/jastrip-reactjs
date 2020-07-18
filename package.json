@@ -1,4 +1,5 @@
 {
+  "homepage":"https://ilhamarl.github.io/Coba-ReactWebApp",
   "name": "cobareactwebapp",
   "version": "0.1.0",
   "private": true,
@@ -16,15 +17,16 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "css-build": "node-sass --omit-source-map-url src/assets/css/bootstrap_import.scss src/assets/css/styles.css",
     "css-watch": "npm run css-build -- --watch",
-    "start-csswatch": "npm run css-watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start-csswatch": "npm run css-watch"
   },
   "eslintConfig": {
     "extends": "react-app"
