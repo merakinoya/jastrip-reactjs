@@ -57,7 +57,7 @@ export default class UserProfile extends Component {
                                     </div>
                                 </div>
 
-                        </div>
+                            </div>
                             <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                                 <h4 className="font-weight-bolder mb-4">Transaction</h4>
                                 <div className="table-responsive">
@@ -98,10 +98,37 @@ export default class UserProfile extends Component {
                             </div>
                             <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                 <h4 className="font-weight-bolder">Settings</h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled />
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Disabled checkbox</label>
+                                </div>
+
                             </div>
                             <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                                 <h4 className="font-weight-bolder mb-4">Change Password</h4>
-
+                                <form class="mt-4">
+                                    <div class="form-group">
+                                        <label for="old-password">Password Lama</label>
+                                        <input type="password" class="form-control" id="old-password" placeholder="Masukkan password lama" />
+                                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <hr />
+                                    <div class="form-group">
+                                        <label for="new-password">Password Baru</label>
+                                        <input type="password" class="form-control" id="new-password" placeholder="Masukkan password baru" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">Konfirmasi Password Baru</label>
+                                        <input type="password" class="form-control" id="confirm-password" placeholder="Masukkan ulang password baru" />
+                                    </div>
+                                    <button class="btn btn-primary">Save Password</button>
+                                </form>
                             </div>
                         </div>
                     </div>

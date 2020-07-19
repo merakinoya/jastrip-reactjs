@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import brandlogo from '../assets/img/brandlogo.svg';
+import icon_close from '../assets/icon/x.svg';
 
 import {
     BrowserRouter as Router,
@@ -17,8 +18,10 @@ class Navbar extends Component {
 
     render() {
         const { isNavCollapse } = this.state;
-        
+
         return (
+            <header>
+
                 <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-white fixed-top shadow-sm">
                     <div className="container">
                         <Link to="/" className="navbar-brand">
@@ -35,7 +38,8 @@ class Navbar extends Component {
                                     <a className="nav-link" href="products.html">Products <span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="user-profile.html">Transaction</a>
+                                    <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                        Launch demo modal</button>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,6 +54,43 @@ class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
+
+                <div className="modal fade" id="staticBackdrop" data-backdrop="" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="staticBackdropLabel">Sign In</h5>
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><img src={icon_close} /></span>
+                                </button>
+                            </div>
+                            <form>
+                                <div className="modal-body">
+                                    <div className="container">
+                                        <div className="form-group">
+                                            <label for="InputEmail">Email address</label>
+                                            <input type="email" className="form-control" id="InputEmail" aria-describedby="emailHelp" />
+                                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <div className="form-group">
+                                            <label for="InputPassword">Password</label>
+                                            <input type="password" className="form-control" id="InputPassword" />
+                                        </div>
+                                        <div className="form-group form-check">
+                                            <input type="checkbox" className="form-check-input" id="RememberMe" />
+                                            <label className="form-check-label" for="RememberMe">Remember Me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn" data-dismiss="modal">SignUp</button>
+                                    <button type="button" className="btn btn-primary">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
         )
     }
 }

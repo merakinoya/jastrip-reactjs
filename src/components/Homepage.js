@@ -12,7 +12,7 @@ export default class Homepage extends Component {
                                 <h1 class="display-3 text-white">Hello, world!</h1>
                                 <p class="text-white">This is a template for a simple marketing or informational website. It includes a
                                 large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                                <p><button class="btn btn-primary btn-lg" >Learn more &raquo;</button></p>
 
                             </div>
 
