@@ -11,12 +11,11 @@ export default class UserProfile extends Component {
                     <div className="col-md-4 mt-3">
                         <div className="d-flex flex-row bd-highlight mb-4">
                             <img className="rounded-circle mb-4" src="https://source.unsplash.com/b1Hg7QI-zcc/52x52" alt="Profile" />
-
                             
                             <div className="list-group ml-3">
                                 <h2 className="">{firebaseServices.auth().currentUser.displayName}</h2>
                                 <p className="">{firebaseServices.auth().currentUser.email}</p>
-                                <a href="/">Edit Profil</a>
+                                <a href="/">Edit Profile</a>
                             </div>
                         </div>
                         <div className="nav-scroller">
