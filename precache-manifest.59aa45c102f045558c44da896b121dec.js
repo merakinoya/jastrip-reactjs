@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc0abfe2abf13058319c34d5a6f06e69",
+    "revision": "f79bd8402491d16b9f6b3ee623e6d345",
     "url": "/Coba-ReactWebApp/index.html"
   },
   {
-    "revision": "ad43a15596306f254f80",
-    "url": "/Coba-ReactWebApp/static/css/main.fed17ab8.chunk.css"
+    "revision": "25c04937d93594bfb2d0",
+    "url": "/Coba-ReactWebApp/static/css/main.24916592.chunk.css"
   },
   {
-    "revision": "f3c4273bb0343a5ccbfa",
-    "url": "/Coba-ReactWebApp/static/js/2.23aa0aa1.chunk.js"
+    "revision": "37dabc974f2f6214e41c",
+    "url": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Coba-ReactWebApp/static/js/2.23aa0aa1.chunk.js.LICENSE.txt"
+    "revision": "2415e6967177769184874497a3c934bc",
+    "url": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad43a15596306f254f80",
-    "url": "/Coba-ReactWebApp/static/js/main.08db8d8b.chunk.js"
+    "revision": "25c04937d93594bfb2d0",
+    "url": "/Coba-ReactWebApp/static/js/main.2b96d2ac.chunk.js"
   },
   {
     "revision": "9b60c2ec51bcd101f30e",
