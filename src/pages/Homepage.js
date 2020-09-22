@@ -4,20 +4,21 @@ export default class Homepage extends Component {
     render() {
         return (
             <section>
-                <div class="hero">
-                    <div class="container">
-                        <div class="row">
+                <div className="hero">
+                    <div className="container">
+                        <div className="row">
 
-                            <div class="col-md-7">
-                                <h1 class="display-3 text-white">Hello, world!</h1>
-                                <p class="text-white">This is a template for a simple marketing or informational website. It includes a
+                            <div className="col-md-7">
+                                <h1 className="display-3 text-white">Hello, world!
+                                </h1>
+                                <p className="text-white">This is a template for a simple marketing or informational website. It includes a
                                 large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                                <p><button class="btn btn-primary btn-lg" >Learn more &raquo;</button></p>
+                                <p><button className="btn btn-primary btn-lg" >Learn more &raquo;</button></p>
 
                             </div>
 
-                            <div class="col-md-5">
-                                <div class="">
+                            <div className="col-md-5">
+                                <div className="">
                                 </div>
                             </div>
                         </div>

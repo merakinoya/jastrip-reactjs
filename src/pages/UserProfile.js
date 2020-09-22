@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import firebaseServices from "../services/firebase";
 
 export default class UserProfile extends Component {
+    
     render() {
+
         return (
             <div className="container mt-7">
                 <div className="row">
                     <div className="col-md-4 mt-3">
                         <div className="d-flex flex-row bd-highlight mb-4">
                             <img className="rounded-circle mb-4" src="https://source.unsplash.com/b1Hg7QI-zcc/52x52" alt="Profile" />
+
+                            
                             <div className="list-group ml-3">
-                                <h2 className="">Ilham Arl</h2>
-                                <a href="edit-profile.html">Edit Profil</a>
+                                <h2 className="">{firebaseServices.auth().currentUser.displayName}</h2>
+                                <p className="">{firebaseServices.auth().currentUser.email}</p>
+                                <a href="/">Edit Profil</a>
                             </div>
                         </div>
                         <div className="nav-scroller">
@@ -20,6 +26,7 @@ export default class UserProfile extends Component {
                                 <a className="nav-item nav-link text-nowrap" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Transaction</a>
                                 <a className="nav-item nav-link text-nowrap" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Settings</a>
                                 <a className="nav-item nav-link text-nowrap" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Change Password</a>
+                                <a href="/" onClick={() => firebaseServices.auth().signOut()} className="nav-item nav-link text-nowrap red" >Sign Out</a>
 
                             </div>
                         </div>
@@ -34,8 +41,8 @@ export default class UserProfile extends Component {
                                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2">
                                     <div className="col mb-4">
                                         <div className="card border-0 shadow rounded-lg">
-                                            <a className="position-absolute-custom text-white" href="" data-toggle="tooltip" data-placement="top" title="Wishlist"><i data-feather="heart"></i></a>
-                                            <img className="card-img-top rounded-top" src="https://source.unsplash.com/x9I-6yoXrXE" alt="Card image cap" />
+                                            <i data-feather="heart"></i>
+                                            <img className="card-img-top rounded-top" src="https://source.unsplash.com/x9I-6yoXrXE" alt="" />
 
                                             <div className="card-body" href="">
 

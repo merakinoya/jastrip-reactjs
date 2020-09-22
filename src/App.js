@@ -1,48 +1,50 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
+
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import SwitchRoute from './components/SwitchRoute';
+
+import UserProfile from './pages/UserProfile';
+import Homepage from './pages/Homepage';
+import Products from './pages/Products';
+import Login from './pages/Login';
+
+
+import { AuthProvider } from "./services/auth";
+import PrivateRoute from './routes/PrivateRoute';
+
+
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 
-class App extends Component {
+const App = () => {
 
+  return (
 
-  render() {
-    return (
+    <AuthProvider>
+
       <Router>
         <Navbar />
-        
-        <SwitchRoute />
+
+        <Switch>
+          <PrivateRoute path="/userprofile" component={UserProfile} />
+          <Route path="/products" component={Products} />
+
+
+          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Homepage} />
+        </Switch>
 
         <Footer />
       </Router>
-    )
-  }
+
+    </AuthProvider>
+  )
+
+
 }
 
 export default App;
-
-/* Example
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
