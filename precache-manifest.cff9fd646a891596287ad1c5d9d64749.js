@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f79bd8402491d16b9f6b3ee623e6d345",
+    "revision": "331561a34acfe3c41405df41ee41d09a",
     "url": "/Coba-ReactWebApp/index.html"
   },
   {
-    "revision": "25c04937d93594bfb2d0",
+    "revision": "60cfec756f3f03135ee1",
     "url": "/Coba-ReactWebApp/static/css/main.24916592.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "25c04937d93594bfb2d0",
-    "url": "/Coba-ReactWebApp/static/js/main.2b96d2ac.chunk.js"
+    "revision": "60cfec756f3f03135ee1",
+    "url": "/Coba-ReactWebApp/static/js/main.27523a39.chunk.js"
   },
   {
     "revision": "9b60c2ec51bcd101f30e",
