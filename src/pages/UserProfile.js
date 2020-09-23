@@ -12,7 +12,7 @@ export default class UserProfile extends Component {
                         <div className="d-flex flex-row bd-highlight mb-4">
                             <img className="rounded-circle mb-4" src="https://source.unsplash.com/b1Hg7QI-zcc/52x52" alt="Profile" />
                             
-                            <div className="list-group ml-3">
+                            <div className="list-group ml-2">
                                 <h2 className="">{firebaseServices.auth().currentUser.displayName}</h2>
                                 <p className="">{firebaseServices.auth().currentUser.email}</p>
                                 <a href="/">Edit Profile</a>
