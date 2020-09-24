@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
+import firebaseFirestore from '../services/firebase';
 
-function Products() {
+class Products extends Component {
+
+    constructor(props) {
+        super(props);
+        this.unsubscribe = null;
+        this.state = {
+          products: []
+        };
+      }
+
+
+      onCollectionUpdate = (firebaseFirestore) => 
+      {
+        const products = [];
+
+        firebaseFirestore.collection("products").get().then((querySnapshot) => {
+            
+            querySnapshot.forEach((doc) => {
     
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState({ products: [] });
-  
-    // Note: the empty deps array [] means
-    // this useEffect will run once
-    // similar to componentDidMount()
-    useEffect(() => {
-      fetch("http://127.0.0.1:8000/api/product")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setIsLoaded(true);
-            setItems(result.items);
-          },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
-          (error) => {
-            setIsLoaded(true);
-            setError(error);
-          }
-        )
-    }, [])
-  
-    if (error) 
-    {
-      return <div>Error: {error.message}</div>;
-    } 
-    else if (!isLoaded) 
-    {
-      return <div>Loading...</div>;
-    } 
+                const { title, description, author } = doc.data();
+    
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
 
-    else 
-    {
-      return (
-        <ul>
-         {items.products.map(item => (
-            <li key={item.name}>
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      );
-    }
-  }
+      };
+
+render() {
+    return (
+        <div>
+            <form>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name of Product"
+                />
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Desc of product"
+                />
+                <button type="submit">Save Data</button>
+            </form>
+        </div>
+    );
+}
+}
+
 
 export default Products;
