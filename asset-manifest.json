@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Coba-ReactWebApp/static/css/main.24916592.chunk.css",
-    "main.js": "/Coba-ReactWebApp/static/js/main.27523a39.chunk.js",
-    "main.js.map": "/Coba-ReactWebApp/static/js/main.27523a39.chunk.js.map",
-    "runtime-main.js": "/Coba-ReactWebApp/static/js/runtime-main.27fd8110.js",
-    "runtime-main.js.map": "/Coba-ReactWebApp/static/js/runtime-main.27fd8110.js.map",
-    "static/js/2.ab93d1ee.chunk.js": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js",
-    "static/js/2.ab93d1ee.chunk.js.map": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js.map",
-    "index.html": "/Coba-ReactWebApp/index.html",
-    "precache-manifest.cff9fd646a891596287ad1c5d9d64749.js": "/Coba-ReactWebApp/precache-manifest.cff9fd646a891596287ad1c5d9d64749.js",
-    "service-worker.js": "/Coba-ReactWebApp/service-worker.js",
-    "static/css/main.24916592.chunk.css.map": "/Coba-ReactWebApp/static/css/main.24916592.chunk.css.map",
-    "static/js/2.ab93d1ee.chunk.js.LICENSE.txt": "/Coba-ReactWebApp/static/js/2.ab93d1ee.chunk.js.LICENSE.txt",
-    "static/media/brandlogo.svg": "/Coba-ReactWebApp/static/media/brandlogo.929e6e34.svg",
-    "static/media/x.svg": "/Coba-ReactWebApp/static/media/x.b0200bf7.svg"
+    "main.css": "/jastrip-reactjs/static/css/main.24916592.chunk.css",
+    "main.js": "/jastrip-reactjs/static/js/main.6fd24675.chunk.js",
+    "main.js.map": "/jastrip-reactjs/static/js/main.6fd24675.chunk.js.map",
+    "runtime-main.js": "/jastrip-reactjs/static/js/runtime-main.f6e655da.js",
+    "runtime-main.js.map": "/jastrip-reactjs/static/js/runtime-main.f6e655da.js.map",
+    "static/js/2.cdbb0572.chunk.js": "/jastrip-reactjs/static/js/2.cdbb0572.chunk.js",
+    "static/js/2.cdbb0572.chunk.js.map": "/jastrip-reactjs/static/js/2.cdbb0572.chunk.js.map",
+    "index.html": "/jastrip-reactjs/index.html",
+    "precache-manifest.ed4da9108606a6c4bc76d646176d707f.js": "/jastrip-reactjs/precache-manifest.ed4da9108606a6c4bc76d646176d707f.js",
+    "service-worker.js": "/jastrip-reactjs/service-worker.js",
+    "static/css/main.24916592.chunk.css.map": "/jastrip-reactjs/static/css/main.24916592.chunk.css.map",
+    "static/js/2.cdbb0572.chunk.js.LICENSE.txt": "/jastrip-reactjs/static/js/2.cdbb0572.chunk.js.LICENSE.txt",
+    "static/media/brandlogo.svg": "/jastrip-reactjs/static/media/brandlogo.929e6e34.svg",
+    "static/media/x.svg": "/jastrip-reactjs/static/media/x.b0200bf7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.27fd8110.js",
-    "static/js/2.ab93d1ee.chunk.js",
+    "static/js/runtime-main.f6e655da.js",
+    "static/js/2.cdbb0572.chunk.js",
     "static/css/main.24916592.chunk.css",
-    "static/js/main.27523a39.chunk.js"
+    "static/js/main.6fd24675.chunk.js"
   ]
 }
