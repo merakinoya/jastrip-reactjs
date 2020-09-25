@@ -1,52 +1,81 @@
 import React, { Component } from 'react';
-import firebaseFirestore from '../services/firebase';
+import firebaseServices from '../services/firebase';
 
 class Products extends Component {
 
     constructor(props) {
         super(props);
+
         this.unsubscribe = null;
+
         this.state = {
-          products: []
+            error: null,
+            isLoaded: false,
+            products: []
         };
-      }
+
+    }
 
 
-      onCollectionUpdate = (firebaseFirestore) => 
-      {
-        const products = [];
+    componentDidMount() {
 
-        firebaseFirestore.collection("products").get().then((querySnapshot) => {
-            
+        firebaseServices.firestore().collection("products").get().then((querySnapshot) => {
+
+            const products = [];
+
             querySnapshot.forEach((doc) => {
-    
-                const { title, description, author } = doc.data();
-    
+
+                const { name, description } = doc.data();
+
+                products.push({
+                    key: doc.id,
+                    doc, // DocumentSnapshot
+                    name,
+                    description,
+                });
+
                 console.log(`${doc.id} => ${doc.data()}`);
             });
+
+            this.setState({
+                products
+            });
+
         });
 
-      };
+    }
 
-render() {
-    return (
-        <div>
-            <form>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Name of Product"
-                />
-                <input
-                    type="text"
-                    name="description"
-                    placeholder="Desc of product"
-                />
-                <button type="submit">Save Data</button>
-            </form>
-        </div>
-    );
-}
+
+    render() {
+        const { error, isLoaded, products, message } = this.state;
+
+        if (error) {
+            return (<div>Error: {error.message}</div>)
+        }
+        else if (isLoaded) {
+            return (<div>Loading...</div>)
+        }
+        else {
+
+            return (
+                <div className="mt-5 container">
+                     {message}
+
+                    <a className="btn btn-primary mb-4" href="/create">Create a Products</a>
+                    {
+                        products.map(products => (
+                            <div key={products.key}>
+                                <div>{products.name}</div>
+                                <div>{products.description}</div>
+                                <hr></hr>
+                            </div>
+                        ))
+                    }
+                </div>
+            );
+
+        }
+    }
 }
 
 

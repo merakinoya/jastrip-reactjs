@@ -1,6 +1,6 @@
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
-import * as firebase from "firebase/app";
+import * as firebase from 'firebase/app';
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
@@ -24,10 +24,8 @@ const firebaseServices = firebase.initializeApp(firebaseConfig);
 export default firebaseServices;
 
 
-const settings = {timestampsInSnapshots: true};
-export const firebaseFirestore = firebase.firestore().settings(settings);
-
-
-export const firebaseAuth = firebase.auth;
-export const firebaseDatabase = firebase.database();
+//const settings = {timestampsInSnapshots: true};
+//export const firebaseFirestore = firebaseServices.firestore().settings(settings);
+//export const firebaseAuth = firebase.auth;
+//export const firebaseDatabase = firebase.database();
 

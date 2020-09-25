@@ -18,7 +18,7 @@ const Login = ({ history }) => {
             const { email, password } = event.target.elements;
             try {
                 await firebaseServices.auth().signInWithEmailAndPassword(email.value, password.value);
-                history.push("/");
+                history.push('/');
             }
             catch (error) {
                 alert(error);

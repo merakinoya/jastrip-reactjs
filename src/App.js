@@ -6,7 +6,10 @@ import Footer from './components/Footer';
 
 import UserProfile from './pages/UserProfile';
 import Homepage from './pages/Homepage';
+
 import Products from './pages/Products';
+import ProductCreate from './pages/ProductCreate';
+
 import Login from './pages/Login';
 
 
@@ -31,8 +34,9 @@ const App = () => {
 
         <Switch>
           <PrivateRoute path="/userprofile" component={UserProfile} />
-          <Route path="/products" component={Products} />
 
+          <Route path="/products" component={Products} />
+          <Route path="/create" component={ProductCreate} />
 
           <Route path="/login" component={Login} />
           <Route exact path="/" component={Homepage} />

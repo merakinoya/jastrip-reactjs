@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import brandlogo from '../assets/img/brandlogo.svg';
 import icon_close from '../assets/icon/x.svg';
 
+import avatarDefault from '../assets/img/Avatar.svg';
+
 import firebaseServices from '../services/firebase';
 
 import { Link } from "react-router-dom";
@@ -19,9 +21,9 @@ function ProfileUser(props) {
     return (
         <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#dropdown" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src={firebaseServices.auth().currentUser.photoURL} alt=" " className="rounded-circle mr-1 mb-1" style={PhotoProfilestyle} />
+                <img src={firebaseServices.auth().currentUser.photoURL ? firebaseServices.auth().currentUser.photoURL : avatarDefault } alt=" " className="rounded-circle mr-1 mb-1" style={PhotoProfilestyle} />
                 <b>
-                {firebaseServices.auth().currentUser.displayName}
+                {firebaseServices.auth().currentUser.displayName ? firebaseServices.auth().currentUser.displayName : firebaseServices.auth().currentUser.email }
                 </b>
             </a>
             <div className="dropdown-menu" aria-labelledby="dropdown01">
@@ -81,19 +83,15 @@ class Navbar extends Component {
 
                         <div className={`navbar-collapse ${isNavCollapse ? "offcanvas-collapse open" : "offcanvas-collapse"}`} id="navbarsExampleDefault">
                             <ul className="navbar-nav ml-auto">
-                                <li className="nav-item active">
-                                    <Link to="/login" className="nav-link">Login</Link>
-                                </li>
+
                                 <li className="nav-item active">
                                     <a className="nav-link" href="/products">Products <span className="sr-only">(current)</span></a>
-                                </li>
-                                <li className="nav-item active">
-                                    <Link to="/authapp" className="nav-link">Auth App</Link>
                                 </li>
 
                                 <li className="nav-item">
                                     <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">
-                                        Launch demo modal</button>
+                                        Modals
+                                    </button>
                                 </li>
 
                                 <LoggedinCheck user={false} />

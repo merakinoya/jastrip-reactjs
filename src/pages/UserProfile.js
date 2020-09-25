@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import firebaseServices from "../services/firebase";
+import avatarDefault from '../assets/img/Avatar.svg';
 
 export default class UserProfile extends Component {
     
+    
     render() {
+
+        const PhotoProfilestyle = { 
+            backgroundColor: "#999999",
+            width: "52px",
+            height: "52px",
+            border: "1px"
+        };
 
         return (
             <div className="container mt-7">
                 <div className="row">
                     <div className="col-md-4 mt-3">
                         <div className="d-flex flex-row bd-highlight mb-4">
-                            <img className="rounded-circle mb-4" src="https://source.unsplash.com/b1Hg7QI-zcc/52x52" alt="Profile" />
+                            <img className="rounded-circle mb-4" src={firebaseServices.auth().currentUser.photoURL ? firebaseServices.auth().currentUser.photoURL : avatarDefault } style={PhotoProfilestyle} alt="Profile" />
                             
                             <div className="list-group ml-2">
                                 <h2 className="">{firebaseServices.auth().currentUser.displayName}</h2>
