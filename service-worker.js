@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jastrip-reactjs/precache-manifest.ed4da9108606a6c4bc76d646176d707f.js"
+  "/jastrip-reactjs/precache-manifest.7d4b6e68d2b9c7377b0e60b4e9a7e1d0.js"
 );
 
 self.addEventListener('message', (event) => {
